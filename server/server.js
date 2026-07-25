@@ -3,7 +3,9 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -82,30 +84,56 @@ app.post('/api/contact', async (req, res) => {
     return res.status(500).json({ error: 'Could not save your message. Please try again.' });
   }
 
-  // 2. Try to email a notification (optional — only if SMTP env vars are set)
-  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && process.env.TO_EMAIL) {
+  // 2. Try to email a notification (optional — only if Resend is configured)
+  if (resend && process.env.TO_EMAIL) {
     try {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT) || 587,
-        secure: Number(process.env.SMTP_PORT) === 465,
-        auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
-      });
-
-      await transporter.sendMail({
-        from: `"Navintrix Website" <${process.env.SMTP_USER}>`,
+      const { error } = await resend.emails.send({
+        from: process.env.FROM_EMAIL || 'Navintrix Website <onboarding@resend.dev>',
         to: process.env.TO_EMAIL,
         replyTo: lead.email,
         subject: `New enquiry: ${lead.name}${lead.service ? ' — ' + lead.service : ''}`,
         text: `Name: ${lead.name}\nEmail: ${lead.email}\nPhone: ${lead.phone}\nCompany: ${lead.company}\nService: ${lead.service}\n\nMessage:\n${lead.message}`
       });
+      if (error) {
+        console.error('❌ Email notification failed (lead was still saved). Reason:', error);
+      } else {
+        console.log('✅ Email notification sent for lead', lead.id);
+      }
     } catch (err) {
       // Don't fail the request just because email didn't send — the lead is already saved.
-      console.error('Email notification failed (lead was still saved):', err.message);
+      console.error('❌ Email notification failed (lead was still saved). Full error below:');
+      console.error(err);
     }
   }
 
   res.status(200).json({ ok: true, message: 'Thanks — we got your message and will get back to you shortly.' });
+});
+
+// --- GET /api/debug-email : manually trigger a test send, protected by ADMIN_TOKEN.
+// Visit /api/debug-email?token=YOUR_ADMIN_TOKEN in a browser to see the exact error
+// (or confirmation) without needing to submit the real form.
+// Remove this route once email is confirmed working.
+app.get('/api/debug-email', async (req, res) => {
+  if (!process.env.ADMIN_TOKEN || req.query.token !== process.env.ADMIN_TOKEN) {
+    return res.status(401).json({ error: 'Unauthorized. Pass ?token=YOUR_ADMIN_TOKEN.' });
+  }
+  if (!resend || !process.env.TO_EMAIL) {
+    return res.status(500).json({ error: 'RESEND_API_KEY or TO_EMAIL is missing on this server.', have: {
+      RESEND_API_KEY: !!process.env.RESEND_API_KEY, TO_EMAIL: !!process.env.TO_EMAIL
+    }});
+  }
+  try {
+    const { data, error } = await resend.emails.send({
+      from: process.env.FROM_EMAIL || 'Navintrix Website <onboarding@resend.dev>',
+      to: process.env.TO_EMAIL,
+      subject: 'Navintrix debug email',
+      text: 'If you received this, email sending is working correctly.'
+    });
+    if (error) return res.status(500).json({ ok: false, error });
+    res.json({ ok: true, message: 'Test email sent successfully — check ' + process.env.TO_EMAIL, id: data.id });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
 });
 
 // --- GET /api/leads : simple protected view of stored leads (basic token check) ---
@@ -129,4 +157,10 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Navintrix server running on http://localhost:${PORT}`);
+
+  if (resend && process.env.TO_EMAIL) {
+    console.log('✅ Resend is configured — email notifications are ON, sending to', process.env.TO_EMAIL);
+  } else {
+    console.warn('⚠️  RESEND_API_KEY or TO_EMAIL is missing — email notifications are OFF. Leads still save to leads.json.');
+  }
 });
