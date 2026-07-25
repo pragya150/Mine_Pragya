@@ -1,0 +1,172 @@
+[
+  {
+    "id": "ai-automation",
+    "sheet": "01",
+    "title": "AI & Automation",
+    "blurb": "Agents, chatbots, and workflows that take repetitive work off your team's plate.",
+    "items": [
+      "AI Automation Solutions",
+      "AI Agents (Voice & Chat)",
+      "n8n Workflow Automation",
+      "Business Process Automation",
+      "CRM Automation",
+      "WhatsApp Automation",
+      "Email Automation",
+      "Lead Generation Automation",
+      "Appointment Booking Systems",
+      "Customer Support AI Chatbots",
+      "AI Voice Calling Agents",
+      "RAG (Retrieval-Augmented Generation) Solutions",
+      "Custom LLM Applications"
+    ]
+  },
+  {
+    "id": "data-engineering",
+    "sheet": "02",
+    "title": "Data Engineering",
+    "blurb": "The pipelines and warehouses that make every other system trustworthy.",
+    "items": [
+      "Data Pipeline Development",
+      "ETL/ELT Development",
+      "Data Warehousing",
+      "Data Lake Architecture",
+      "Data Migration",
+      "Data Integration",
+      "Data Quality & Validation",
+      "Batch & Real-time Data Processing",
+      "Data Modeling",
+      "Big Data Solutions"
+    ]
+  },
+  {
+    "id": "cloud-engineering",
+    "sheet": "03",
+    "title": "Cloud Engineering",
+    "blurb": "Infrastructure that scales with you instead of breaking under you.",
+    "items": [
+      "Google Cloud (GCP)",
+      "AWS Solutions",
+      "Cloud Migration",
+      "Cloud Infrastructure Setup",
+      "CI/CD Pipelines",
+      "Docker Containerization",
+      "Kubernetes Deployments",
+      "Infrastructure Automation"
+    ]
+  },
+  {
+    "id": "ai-ml",
+    "sheet": "04",
+    "title": "AI & Machine Learning",
+    "blurb": "Models that ship to production, not just to a notebook.",
+    "items": [
+      "Machine Learning Models",
+      "Predictive Analytics",
+      "Computer Vision",
+      "NLP Solutions",
+      "Recommendation Systems",
+      "AI Model Deployment",
+      "MLOps"
+    ]
+  },
+  {
+    "id": "software-development",
+    "sheet": "05",
+    "title": "Software Development",
+    "blurb": "Full-stack build for products, internal tools, and enterprise systems.",
+    "items": [
+      "SaaS Product Development",
+      "Custom Web Applications",
+      "Enterprise Software",
+      "REST APIs",
+      "Microservices Architecture",
+      "Backend Development",
+      "Frontend Development",
+      "Full-Stack Development"
+    ]
+  },
+  {
+    "id": "business-intelligence",
+    "sheet": "06",
+    "title": "Business Intelligence",
+    "blurb": "Dashboards leadership actually opens before a board meeting.",
+    "items": [
+      "Power BI Dashboards",
+      "Looker Studio Dashboards",
+      "Tableau Dashboards",
+      "Executive Dashboards",
+      "KPI Reporting"
+    ]
+  },
+  {
+    "id": "trading-fintech",
+    "sheet": "07",
+    "title": "Trading & FinTech",
+    "blurb": "Systems built with the same rigor as the markets they trade in.",
+    "items": [
+      "Algorithmic Trading Systems",
+      "Trading Bots",
+      "Backtesting Platforms",
+      "Broker API Integrations",
+      "Risk Management Tools",
+      "Financial Analytics"
+    ]
+  },
+  {
+    "id": "devops",
+    "sheet": "08",
+    "title": "DevOps",
+    "blurb": "Keeping what's already built fast, visible, and secure.",
+    "items": [
+      "CI/CD Automation",
+      "Monitoring & Logging",
+      "Server Management",
+      "Performance Optimization",
+      "Security Hardening"
+    ]
+  },
+  {
+    "id": "consulting",
+    "sheet": "09",
+    "title": "Consulting",
+    "blurb": "Strategy and architecture work before a single line of code.",
+    "items": [
+      "AI Strategy Consulting",
+      "Data Strategy",
+      "Digital Transformation",
+      "Cloud Consulting",
+      "Architecture Design",
+      "Technical Audits"
+    ]
+  },
+  {
+    "id": "education-training",
+    "sheet": "10",
+    "title": "Education & Training",
+    "blurb": "Upskilling teams and individuals in the stack we build on.",
+    "items": [
+      "Data Engineering Training",
+      "SQL Training",
+      "Python Training",
+      "AI & ML Courses",
+      "Cloud (GCP/AWS) Training",
+      "Corporate Training",
+      "Career Mentoring"
+    ]
+  },
+  {
+    "id": "future-saas",
+    "sheet": "11",
+    "title": "Future SaaS Products",
+    "blurb": "Products in development, built from our own client work.",
+    "items": [
+      "AI CRM",
+      "AI Sales Assistant",
+      "AI Customer Support Platform",
+      "Data Pipeline Platform",
+      "Workflow Automation Platform",
+      "Analytics Platform",
+      "Trading Automation Platform"
+    ]
+  }
+]
