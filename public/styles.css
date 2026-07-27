@@ -199,7 +199,7 @@ footer{border-top:1px solid var(--line-dim);padding:48px 0 32px;overflow:hidden;
 .footer-links h5{font-size:11px;color:var(--line);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-weight:500;}
 .footer-bottom{
   margin-top:40px;padding-top:20px;border-top:1px solid var(--line-dim);
-  display:flex;justify-content:space-between;font-size:12px;color:var(--muted);flex-wrap:wrap;gap:10px;
+  display:flex;justify-content:center;align-items:center;text-align:center;font-size:12px;color:var(--muted);flex-wrap:wrap;gap:10px;
 }
 
 @media (prefers-reduced-motion: reduce){.flow-dot{animation:none !important;}}
