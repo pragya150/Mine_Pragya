@@ -1,7 +1,6 @@
 [
   {
     "id": "ai-automation",
-    "sheet": "01",
     "title": "AI & Automation",
     "blurb": "Agents, chatbots, and workflows that take repetitive work off your team's plate.",
     "items": [
@@ -22,7 +21,6 @@
   },
   {
     "id": "data-engineering",
-    "sheet": "02",
     "title": "Data Engineering",
     "blurb": "The pipelines and warehouses that make every other system trustworthy.",
     "items": [
@@ -40,7 +38,6 @@
   },
   {
     "id": "cloud-engineering",
-    "sheet": "03",
     "title": "Cloud Engineering",
     "blurb": "Infrastructure that scales with you instead of breaking under you.",
     "items": [
@@ -56,7 +53,6 @@
   },
   {
     "id": "ai-ml",
-    "sheet": "04",
     "title": "AI & Machine Learning",
     "blurb": "Models that ship to production, not just to a notebook.",
     "items": [
@@ -71,7 +67,6 @@
   },
   {
     "id": "software-development",
-    "sheet": "05",
     "title": "Software Development",
     "blurb": "Full-stack build for products, internal tools, and enterprise systems.",
     "items": [
@@ -87,7 +82,6 @@
   },
   {
     "id": "business-intelligence",
-    "sheet": "06",
     "title": "Business Intelligence",
     "blurb": "Dashboards leadership actually opens before a board meeting.",
     "items": [
@@ -100,7 +94,6 @@
   },
   {
     "id": "trading-fintech",
-    "sheet": "07",
     "title": "Trading & FinTech",
     "blurb": "Systems built with the same rigor as the markets they trade in.",
     "items": [
@@ -114,7 +107,6 @@
   },
   {
     "id": "devops",
-    "sheet": "08",
     "title": "DevOps",
     "blurb": "Keeping what's already built fast, visible, and secure.",
     "items": [
@@ -127,7 +119,6 @@
   },
   {
     "id": "consulting",
-    "sheet": "09",
     "title": "Consulting",
     "blurb": "Strategy and architecture work before a single line of code.",
     "items": [
@@ -141,7 +132,6 @@
   },
   {
     "id": "education-training",
-    "sheet": "10",
     "title": "Education & Training",
     "blurb": "Upskilling teams and individuals in the stack we build on.",
     "items": [
@@ -156,7 +146,6 @@
   },
   {
     "id": "future-saas",
-    "sheet": "11",
     "title": "Future SaaS Products",
     "blurb": "Products in development, built from our own client work.",
     "items": [
