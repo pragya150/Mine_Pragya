@@ -57,7 +57,7 @@ header{
 /* .logo-mark{width:26px;height:26px;flex:none;} */
 .logo {
     display: flex;
-    align-items: left;
+    align-items: center;
 }
 
 .logo-img {
