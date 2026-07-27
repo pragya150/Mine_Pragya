@@ -53,9 +53,9 @@ header{
   background:rgba(6,26,46,0.78);border-bottom:1px solid rgba(111,214,214,0.15);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
-/* .logo{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;font-family:'Space Grotesk',sans-serif;} */
-/* .logo-mark{width:26px;height:26px;flex:none;} */
-.logo {
+ .logo{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;font-family:'Space Grotesk',sans-serif;}
+.logo-mark{width:26px;height:26px;flex:none;} 
+/*  .logo {
     display: flex;
     align-items: center;
 }
@@ -63,7 +63,7 @@ header{
 .logo-img {
     height: 55px;
     width: auto;
-}
+} */
 .nav-links{display:flex;gap:32px;font-size:14px;color:var(--muted);}
 .nav-links a{text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--line);}
