@@ -68,13 +68,14 @@ header{
     text-decoration:none;
 }
 
-.logo-img{
+/* .logo-img{
     width:auto;
     height:60px;
     max-width:220px;
     object-fit:contain;
     display:block;
-}
+}  */
+.logo-img{width:auto;height:60px;max-width:220px;object-fit:contain;display:block;}
 .nav-links{display:flex;gap:32px;font-size:14px;color:var(--muted);}
 .nav-links a{text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--line);}
@@ -229,20 +230,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---- Extra small-screen tightening (phones / tablets) ---- */
 @media (max-width:768px){
-  .logo-img{
+/*  .logo-img{
     height:48px;
     max-width:180px;
-}
+} */
   section{padding:56px 0;}
   .service-panel{padding:20px;}
   .diagram-wrap{padding:10px;}
 }
 
 @media (max-width:480px){
-  .logo-img{
+/*  .logo-img{
     height:40px;
     max-width:150px;
-}
+} */
   .industries{grid-template-columns:1fr;}
   .saas-grid{grid-template-columns:1fr;}
   .hero-actions{flex-direction:column;align-items:stretch;}
