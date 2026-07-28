@@ -21,6 +21,7 @@ if (!fs.existsSync(LEADS_PATH)) {
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.get('/logo.jpeg', (req, res) => res.sendFile(path.join(__dirname, '..', 'logo.jpeg')));
 
 // --- Simple in-memory rate limiter (per IP) to stop form spam ---
 const submissionLog = new Map();
