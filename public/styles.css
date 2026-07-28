@@ -75,7 +75,6 @@ header{
     object-fit:contain;
     display:block;
 }
-}
 .nav-links{display:flex;gap:32px;font-size:14px;color:var(--muted);}
 .nav-links a{text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--line);}
