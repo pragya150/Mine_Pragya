@@ -53,28 +53,8 @@ header{
   background:rgba(6,26,46,0.78);border-bottom:1px solid rgba(111,214,214,0.15);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
-/* .logo{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;font-family:'Space Grotesk',sans-serif;}
-.logo-mark{width:26px;height:26px;flex:none;} */
-  .logo{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    flex-shrink:0;
-}
-
-.logo a{
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-}
-
-/* .logo-img{
-    width:auto;
-    height:60px;
-    max-width:220px;
-    object-fit:contain;
-    display:block;
-}  */
+.logo{display:flex;align-items:center;justify-content:flex-start;flex-shrink:0;}
+.logo a{display:flex;align-items:center;text-decoration:none;}
 .logo-img{width:auto;height:60px;max-width:220px;object-fit:contain;display:block;}
 .nav-links{display:flex;gap:32px;font-size:14px;color:var(--muted);}
 .nav-links a{text-decoration:none;transition:color .2s;}
@@ -230,20 +210,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---- Extra small-screen tightening (phones / tablets) ---- */
 @media (max-width:768px){
-/*  .logo-img{
-    height:48px;
-    max-width:180px;
-} */
+  .logo-img{height:48px;max-width:180px;}
   section{padding:56px 0;}
   .service-panel{padding:20px;}
   .diagram-wrap{padding:10px;}
 }
 
 @media (max-width:480px){
-/*  .logo-img{
-    height:40px;
-    max-width:150px;
-} */
+  .logo-img{height:40px;max-width:150px;}
   .industries{grid-template-columns:1fr;}
   .saas-grid{grid-template-columns:1fr;}
   .hero-actions{flex-direction:column;align-items:stretch;}
