@@ -27,6 +27,26 @@ h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-
 a{color:inherit;}
 ::selection{background:var(--signal);color:var(--ink);}
 
+.map-embed{
+  position:relative;
+  display:block;
+  width:100%;
+  height:190px;
+  margin-top:6px;
+  border:1px solid var(--line-dim);
+  border-radius:2px;
+  overflow:hidden;
+}
+.map-embed iframe{
+  width:100%;height:100%;border:0;
+  pointer-events:none; /* click passes through to the <a>, opening Google Maps in a new tab */
+}
+.map-caption{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
 .grid-bg{
   position:fixed;inset:0;z-index:0;
   background-image:
